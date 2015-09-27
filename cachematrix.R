@@ -1,9 +1,11 @@
 ## This pair of functions take in a matrix, and if its inverse 
 ## has already been computed earlier and has been stored in cache, 
-## then output the cached inverse; else, we compute the inverse and 
-## then store it in cache for future use
+## then the corresponding function outputs the cached inverse; 
+## else, the function computes the inverse and then stores it in 
+## cache for future use
 
-## This function makes a list of functions to get & set the matrix, as well as to get & set the inverse
+## The makeCacheMatrix function makes a list of functions to get & set the matrix, 
+## as well as to get & set the inverse
 
 makeCacheMatrix <- function(x = matrix()) {
        inv <- NULL
@@ -19,8 +21,10 @@ makeCacheMatrix <- function(x = matrix()) {
              getinv = getinv)
 }
 
-## This function checks for cached inverse for the input matrix, and outputs it if available, 
-## else computes the inverse and stores it in cache for future use
+## The cacheSolve function checks for the existence of a cached inverse 
+## for the input matrix, and outputs it if available; 
+## else the function computes the inverse and stores it in 
+## cache for future use
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
